@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.trieste.mobile.esame2017ordini">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appTitle"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.dettaglio_modifica_ordine.ActivityModificaOrdineDettaglio"></activity>
+        <activity android:name=".ui.elenco_ordini.ActivityElencoOrdini" />
+        <activity android:name=".ui.inserisci_ordine.ActivityInserisciOrdine" />
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.OrdiniProvider"
+            android:authorities="com.trieste.mobile.esame2017ordini.provider.OrdiniProvider" />
+    </application>
+
+</manifest>

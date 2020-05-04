@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        app:layout_constraintBottom_toTopOf="@+id/cell_ordini_textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantità"
+        app:layout_constraintBottom_toTopOf="@+id/cell_ordini_textView3"
+        app:layout_constraintStart_toStartOf="@+id/cell_ordini_textView"
+        app:layout_constraintTop_toBottomOf="@+id/cell_ordini_textView"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Importo"
+        app:layout_constraintStart_toStartOf="@+id/cell_ordini_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/cell_ordini_textView2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView_importo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0€"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/cell_ordini_textView_qty"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0/0 00:00"
+        app:layout_constraintBottom_toTopOf="@+id/cell_ordini_textView_qty"
+        app:layout_constraintStart_toStartOf="@+id/cell_ordini_textView_qty"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/cell_ordini_textView_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/cell_ordini_textView_importo"
+        app:layout_constraintStart_toStartOf="@+id/cell_ordini_textView_importo"
+        app:layout_constraintTop_toBottomOf="@+id/cell_ordini_textView_data"
+        app:layout_constraintVertical_chainStyle="packed" />
+</androidx.constraintlayout.widget.ConstraintLayout>
